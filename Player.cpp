@@ -49,24 +49,43 @@ void Player::GetKey()
 	}
 	if (GetAsyncKeyState(VK_LEFT))
 	{
+		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
+		{
+			texture.texture = tex_move;
+		}
+
+		texture.scale.x = 1;
+
 		if (hspeed > -5)
 			hspeed -= 0.5f;
-		texture.scale.x = 1;
 	}
 	if (GetAsyncKeyState(VK_RIGHT))
 	{
+		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
+		{
+			texture.texture = tex_move;
+		}
+
+		texture.scale.x = -1;
+
 		if (hspeed < 5)
 			hspeed += 0.5f;
-		texture.scale.x = -1;
 	}
 	if (!GetAsyncKeyState(VK_LEFT) && !GetAsyncKeyState(VK_RIGHT))
 	{
+		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
+		{
+			texture.texture = tex_idle;
+		}
+
 		hspeed -= hspeed / 20;
 	}
 	if (GetAsyncKeyState(VK_UP))
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
 		{
+			texture.texture = tex_jump;
+
 			vspeed = -15;
 		}
 	}
