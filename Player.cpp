@@ -6,6 +6,12 @@ Player* Player::me = nullptr;
 
 Player::Player()
 {
+	aniSpeed = 0.0f;
+
+	tex_idle = nullptr;
+	tex_move = nullptr;
+	tex_jump = nullptr;
+	tex_atk = nullptr;
 }
 
 Player::~Player()
@@ -15,6 +21,7 @@ Player::~Player()
 void Player::Init()
 {
 	me = this;
+
 	SetTexture(L"resorce/player/idle.png", { 100,100 });
 	SetCollider({ 80,80 });
 
@@ -26,6 +33,8 @@ void Player::Init()
 	z = -10;
 	collider.layer = Layer::PLAYER;
 
+	aniSpeed = 0.2f;
+
 	camera_position = position;
 }
 
@@ -34,6 +43,7 @@ void Player::Update()
 	GetKey();
 	Hspeed();
 	Gravity();
+	Animation();
 }
 
 void Player::LateUpdate()
@@ -123,6 +133,39 @@ void Player::Gravity()
 	else
 	{
 		position.y += vspeed;
+	}
+}
+
+void Player::Animation()
+{
+	texture.index += DXUTGetElapsedTime() / aniSpeed;
+	if (texture.texture == tex_idle)
+	{
+		if (texture.index >= 1)
+		{
+			texture.index = 0;
+		}
+	}
+	if (texture.texture == tex_move)
+	{
+		if (texture.index >= 10)
+		{
+			texture.index = 0;
+		}
+	}
+	if (texture.texture == tex_jump)
+	{
+		if (texture.index >= 5)
+		{
+			texture.index = 0;
+		}
+	}
+	if (texture.texture == tex_atk)
+	{
+		if (texture.index >= 5)
+		{
+			texture.index = 0;
+		}
 	}
 }
 

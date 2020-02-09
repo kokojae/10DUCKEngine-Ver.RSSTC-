@@ -11,6 +11,7 @@ public:
 
 	float vspeed = 0;
 	float hspeed = 0;
+	float aniSpeed;
 
 	LPDIRECT3DTEXTURE9 tex_idle;
 	LPDIRECT3DTEXTURE9 tex_move;
@@ -26,6 +27,7 @@ public:
 	void GetKey();
 	void Hspeed();
 	void Gravity();
+	void Animation();
 	void CameraMove();
 };
 
