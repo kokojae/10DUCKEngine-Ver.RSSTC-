@@ -51,11 +51,13 @@ void Player::GetKey()
 	{
 		if (hspeed > -5)
 			hspeed -= 0.5f;
+		texture.scale.x = 1;
 	}
 	if (GetAsyncKeyState(VK_RIGHT))
 	{
 		if (hspeed < 5)
 			hspeed += 0.5f;
+		texture.scale.x = -1;
 	}
 	if (!GetAsyncKeyState(VK_LEFT) && !GetAsyncKeyState(VK_RIGHT))
 	{
