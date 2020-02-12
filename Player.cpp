@@ -6,7 +6,7 @@ Player* Player::me = nullptr;
 
 Player::Player()
 {
-	aniSpeed = 0.0f;
+	betTime = 0.0f;
 
 	tex_idle = nullptr;
 	tex_move = nullptr;
@@ -33,7 +33,7 @@ void Player::Init()
 	z = -10;
 	collider.layer = Layer::PLAYER;
 
-	aniSpeed = 0.2f;
+	betTime = 0.0f;
 
 	camera_position = position;
 }
@@ -138,33 +138,40 @@ void Player::Gravity()
 
 void Player::Animation()
 {
-	texture.index += DXUTGetElapsedTime() / aniSpeed;
-	if (texture.texture == tex_idle)
+	betTime += DXUTGetElapsedTime();
+
+	if (betTime >= 0.2)
 	{
-		if (texture.index >= 1)
+		betTime = 0;
+		texture.index++;
+
+		if (texture.texture == tex_idle)
 		{
-			texture.index = 0;
+			if (texture.index >= 1)
+			{
+				texture.index = 0;
+			}
 		}
-	}
-	if (texture.texture == tex_move)
-	{
-		if (texture.index >= 10)
+		if (texture.texture == tex_move)
 		{
-			texture.index = 0;
+			if (texture.index >= 10)
+			{
+				texture.index = 0;
+			}
 		}
-	}
-	if (texture.texture == tex_jump)
-	{
-		if (texture.index >= 5)
+		if (texture.texture == tex_jump)
 		{
-			texture.index = 0;
+			if (texture.index >= 5)
+			{
+				texture.index = 0;
+			}
 		}
-	}
-	if (texture.texture == tex_atk)
-	{
-		if (texture.index >= 5)
+		if (texture.texture == tex_atk)
 		{
-			texture.index = 0;
+			if (texture.index >= 5)
+			{
+				texture.index = 0;
+			}
 		}
 	}
 }

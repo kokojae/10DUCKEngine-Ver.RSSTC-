@@ -11,7 +11,7 @@ public:
 
 	float vspeed = 0;
 	float hspeed = 0;
-	float aniSpeed;
+	float betTime;
 
 	LPDIRECT3DTEXTURE9 tex_idle;
 	LPDIRECT3DTEXTURE9 tex_move;
