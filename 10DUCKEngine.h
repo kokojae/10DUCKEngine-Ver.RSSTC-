@@ -12,7 +12,6 @@
 // Base
 #include "GameObject.h"
 #include "Text.h"
-#include "UIText.h"
 // Object
 #include "Block.h"
 #include "Player.h"

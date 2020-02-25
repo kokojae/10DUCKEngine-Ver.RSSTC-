@@ -13,10 +13,10 @@ public:
 	D3DXVECTOR2 position = { 0,0 };
 	TextureInfo texture;
 	BoxCollider collider;
-	std::wstring tag = L"";
 	bool destroy = false;
 	int z = 0;
 	bool destroy_me = true;
+	RECT* rect = new RECT();
 
 	virtual void Init();
 	virtual void Update();
@@ -33,6 +33,8 @@ public:
 
 	void SetTexture(std::wstring path, D3DXVECTOR2 texture_size);
 	void SetCollider(D3DXVECTOR2 size);
+
+	RECT* GetRect(D3DXVECTOR2 vector = { 0,0 });
 };
 
 template<typename T>

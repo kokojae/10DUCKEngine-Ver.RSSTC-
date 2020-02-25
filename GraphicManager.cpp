@@ -63,7 +63,7 @@ void GraphicManager::TextureRender(TextureInfo info, D3DXVECTOR2 position)
 	sprite->Draw(info.texture, &rect, NULL, NULL, info.color);
 }
 
-void GraphicManager::TextRender(std::wstring text, D3DXVECTOR2 position, D3DXVECTOR2 scale)
+void GraphicManager::TextRender(std::wstring text, D3DXVECTOR2 position, D3DXVECTOR2 scale, bool isUI)
 {
 	D3DXMATRIX mat, pos, scale_mat, rotation;
 
@@ -72,21 +72,8 @@ void GraphicManager::TextRender(std::wstring text, D3DXVECTOR2 position, D3DXVEC
 
 	mat = scale_mat * pos;
 
-	mat *= Camera::GetMatrix();
-
-	sprite->SetTransform(&mat);
-
-	font->DrawText(sprite, text.c_str(), -1, NULL, DT_NOCLIP, D3DCOLOR_XRGB(0, 0, 0));
-}
-
-void GraphicManager::TextUIRender(std::wstring text, D3DXVECTOR2 position, D3DXVECTOR2 scale)
-{
-	D3DXMATRIX mat, pos, scale_mat, rotation;
-
-	D3DXMatrixTranslation(&pos, (int)position.x, (int)position.y, 0);
-	D3DXMatrixScaling(&scale_mat, scale.x, scale.y, 1);
-
-	mat = scale_mat * pos;
+	if (!isUI)
+		mat *= Camera::GetMatrix();
 
 	sprite->SetTransform(&mat);
 

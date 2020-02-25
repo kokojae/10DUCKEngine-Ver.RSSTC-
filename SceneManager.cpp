@@ -30,10 +30,9 @@ void SceneManager::LoadScene(Scene scene, bool camera_clear)
 	{
 	case SceneManager::Scene::Main:
 		ObjectManager::Instantiate<Text>({ 0,300 })->SetText(L"방향키 이동 WASD 카메라 조작\n씬이동 스페이스바", { 0.5,0.5 });
-		ObjectManager::Instantiate<UIText>({ 15,0 })->SetText(L"UI 텍스트 이렇게 쓰면됨", { 0.4,0.4 });
-		
-		ObjectManager::Instantiate<Block>({ 0,100 });
+		ObjectManager::Instantiate<Text>({ 15,0 })->SetText(L"UI 텍스트 이렇게 쓰면됨", { 0.4,0.4 }, true);
 
+		ObjectManager::Instantiate<Block>({ 0,100 });
 		ObjectManager::Instantiate<Player>();
 		break;
 	case SceneManager::Scene::InGame:

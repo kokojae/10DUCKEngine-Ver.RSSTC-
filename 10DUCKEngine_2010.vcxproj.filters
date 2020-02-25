@@ -116,9 +116,6 @@
     <ClCompile Include="Text.cpp">
       <Filter>GameObject\Base</Filter>
     </ClCompile>
-    <ClCompile Include="UIText.cpp">
-      <Filter>GameObject\Base</Filter>
-    </ClCompile>
     <ClCompile Include="DXUT\Optional\SDKsound.cpp">
       <Filter>DXUT</Filter>
     </ClCompile>
@@ -171,9 +168,6 @@
       <Filter>Managers</Filter>
     </ClInclude>
     <ClInclude Include="Text.h">
-      <Filter>GameObject\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="UIText.h">
       <Filter>GameObject\Base</Filter>
     </ClInclude>
     <ClInclude Include="DXUT\Optional\SDKsound.h">

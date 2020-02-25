@@ -75,7 +75,7 @@ void ObjectManager::Clear()
 	}
 }
 
-GameObject* ObjectManager::ColliderCheck(D3DXVECTOR2 position, D3DXVECTOR2 size, int layer)
+GameObject* ObjectManager::ColliderCheck(RECT* objRect, int layer)
 {
 	for (GameObject* inst : object_list)
 	{
@@ -86,10 +86,7 @@ GameObject* ObjectManager::ColliderCheck(D3DXVECTOR2 position, D3DXVECTOR2 size,
 		if (inst->destroy)
 			continue;
 
-		if (position.x < inst->position.x + inst->collider.size.x - inst->collider.center.x)
-		if (position.x + size.x > inst->position.x - inst->collider.center.x)
-		if (position.y < inst->position.y + inst->collider.size.y - inst->collider.center.y)
-		if (position.y + size.y > inst->position.y - inst->collider.center.y)
+		if (IntersectRect(&RECT(), objRect, inst->GetRect()))
 			return inst;
 	}
 	return nullptr;
