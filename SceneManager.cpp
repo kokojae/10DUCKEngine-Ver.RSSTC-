@@ -33,6 +33,7 @@ void SceneManager::LoadScene(Scene scene, bool camera_clear)
 		ObjectManager::Instantiate<Text>({ 15,0 })->SetText(L"UI 텍스트 이렇게 쓰면됨", { 0.4,0.4 }, true);
 
 		ObjectManager::Instantiate<Block>({ 0,100 });
+		ObjectManager::Instantiate<Block>({ 1000,-100 });
 		ObjectManager::Instantiate<Player>();
 		break;
 	case SceneManager::Scene::InGame:

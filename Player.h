@@ -13,6 +13,8 @@ public:
 	float hspeed = 0;
 	float betTime;
 
+	bool isJump;
+
 	LPDIRECT3DTEXTURE9 tex_idle;
 	LPDIRECT3DTEXTURE9 tex_move;
 	LPDIRECT3DTEXTURE9 tex_jump;

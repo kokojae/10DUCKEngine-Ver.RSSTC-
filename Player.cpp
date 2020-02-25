@@ -12,6 +12,8 @@ Player::Player()
 	tex_move = nullptr;
 	tex_jump = nullptr;
 	tex_atk = nullptr;
+
+	isJump = false;
 }
 
 Player::~Player()
@@ -61,7 +63,11 @@ void Player::GetKey()
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
 		{
-			texture.texture = tex_move;
+			if (texture.texture != tex_move && !isJump)
+			{
+				texture.index = 0;
+				texture.texture = tex_move;
+			}
 		}
 
 		texture.scale.x = 1;
@@ -71,8 +77,9 @@ void Player::GetKey()
 	}
 	if (GetAsyncKeyState(VK_RIGHT))
 	{
-		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
+		if (texture.texture != tex_move && !isJump)
 		{
+			texture.index = 0;
 			texture.texture = tex_move;
 		}
 
@@ -85,7 +92,11 @@ void Player::GetKey()
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
 		{
-			texture.texture = tex_idle;
+			if (texture.texture != tex_idle)
+			{
+				texture.index = 0;
+				texture.texture = tex_idle;
+			}
 		}
 
 		hspeed -= hspeed / 20;
@@ -94,7 +105,12 @@ void Player::GetKey()
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
 		{
-			texture.texture = tex_jump;
+			if (texture.texture != tex_jump)
+			{
+				texture.index = 0;
+				texture.texture = tex_jump;
+				isJump = true;
+			}
 
 			vspeed = -15;
 		}
@@ -140,7 +156,7 @@ void Player::Animation()
 {
 	betTime += DXUTGetElapsedTime();
 
-	if (betTime >= 0.2)
+	if (betTime >= 0.2f)
 	{
 		betTime = 0;
 		texture.index++;
@@ -164,6 +180,7 @@ void Player::Animation()
 			if (texture.index >= 5)
 			{
 				texture.index = 0;
+				isJump = false;
 			}
 		}
 		if (texture.texture == tex_atk)
