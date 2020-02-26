@@ -7,7 +7,7 @@ public:
 
 	static enum class Scene
 	{
-		Main,InGame
+		Title, Stage1
 	};
 
 	static Scene current_scene;

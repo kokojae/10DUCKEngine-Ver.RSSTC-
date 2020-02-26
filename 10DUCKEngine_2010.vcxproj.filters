@@ -131,6 +131,9 @@
     <ClCompile Include="Block.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -183,6 +186,9 @@
       <Filter>Managers</Filter>
     </ClInclude>
     <ClInclude Include="Block.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
       <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>

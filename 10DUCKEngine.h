@@ -1,8 +1,8 @@
 #pragma once
 
-#define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720
-#define WINDOWED true
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
+#define WINDOWED false
 
 // Component
 #include "BoxCollider.h"
@@ -15,6 +15,7 @@
 // Object
 #include "Block.h"
 #include "Player.h"
+#include "Title.h"
 
 // Manager
 #include "Camera.h"

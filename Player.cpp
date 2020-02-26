@@ -55,10 +55,6 @@ void Player::LateUpdate()
 
 void Player::GetKey()
 {
-	if (GetAsyncKeyState(VK_SPACE))
-	{
-		SceneManager::LoadScene(SceneManager::Scene::InGame);
-	}
 	if (GetAsyncKeyState(VK_LEFT))
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))

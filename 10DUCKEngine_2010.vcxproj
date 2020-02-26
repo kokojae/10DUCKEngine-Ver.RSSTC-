@@ -400,6 +400,7 @@
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="TextureInfo.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="Title.cpp" />
     <ClInclude Include="10DUCKEngine.h" />
     <ClInclude Include="Block.h" />
     <ClInclude Include="BoxCollider.h" />
@@ -415,6 +416,7 @@
     <ClInclude Include="Text.h" />
     <ClInclude Include="TextureInfo.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="Title.h" />
     <None Include="DXUT\Optional\directx.ico" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />
