@@ -12,10 +12,11 @@
 // Base
 #include "GameObject.h"
 #include "Text.h"
+//Scene
+#include "TitleBG.h"
 // Object
 #include "Block.h"
 #include "Player.h"
-#include "Title.h"
 
 // Manager
 #include "Camera.h"

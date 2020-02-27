@@ -31,7 +31,7 @@ void SceneManager::LoadScene(Scene scene, bool camera_clear)
 	case SceneManager::Scene::Title: 
 		SoundManager::PlaySFX(L"resorce/sound/scene/mainmenu.wav", true);
 
-		ObjectManager::Instantiate<Title>();
+		ObjectManager::Instantiate<TitleBG>();
 		break;
 	case SceneManager::Scene::Stage1:
 		SoundManager::PlaySFX(L"resorce/sound/scene/stage1.wav", true);

@@ -24,6 +24,12 @@
     <Filter Include="Component">
       <UniqueIdentifier>{93105cbc-aca7-4b7c-9419-b689123e49cb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Scene">
+      <UniqueIdentifier>{322f5032-1947-4d83-9822-2b755952d437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Scene\Title">
+      <UniqueIdentifier>{815da7af-93d7-4244-8608-5aa1b5a9e787}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -131,9 +137,10 @@
     <ClCompile Include="Block.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="Title.cpp">
-      <Filter>GameObject</Filter>
+    <ClCompile Include="TitleBG.cpp">
+      <Filter>GameObject\Scene\Title</Filter>
     </ClCompile>
+    <ClCompile Include="TitleStartBtn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -188,9 +195,10 @@
     <ClInclude Include="Block.h">
       <Filter>GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Title.h">
-      <Filter>GameObject</Filter>
+    <ClInclude Include="TitleBG.h">
+      <Filter>GameObject\Scene\Title</Filter>
     </ClInclude>
+    <ClInclude Include="TitleStartBtn.h" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
