@@ -14,6 +14,8 @@
 #include "Text.h"
 //Scene
 #include "TitleBG.h"
+#include "TitleStartBtn.h"
+#include "TitleOptionBtn.h"
 // Object
 #include "Block.h"
 #include "Player.h"

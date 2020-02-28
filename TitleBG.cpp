@@ -7,6 +7,8 @@ void TitleBG::Init()
 	SetTexture(L"resorce/background/scene/mainmenu/mainmenu.png", { 192,108 });
 	texture.scale = { 10,10 };
 
+	z = 10;
+
 	betTime = 0;
 }
 

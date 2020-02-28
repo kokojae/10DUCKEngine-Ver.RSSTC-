@@ -1,6 +1,6 @@
 #pragma once
 #include "GameObject.h"
-class TitleStartBtn :
+class TitleOptionBtn :
 	public GameObject
 {
 public:

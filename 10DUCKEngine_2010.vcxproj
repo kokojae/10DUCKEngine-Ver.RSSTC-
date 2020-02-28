@@ -401,6 +401,7 @@
     <ClCompile Include="TextureInfo.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="TitleBG.cpp" />
+    <ClCompile Include="TitleOptionBtn.cpp" />
     <ClCompile Include="TitleStartBtn.cpp" />
     <ClInclude Include="10DUCKEngine.h" />
     <ClInclude Include="Block.h" />
@@ -418,6 +419,7 @@
     <ClInclude Include="TextureInfo.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="TitleBG.h" />
+    <ClInclude Include="TitleOptionBtn.h" />
     <ClInclude Include="TitleStartBtn.h" />
     <None Include="DXUT\Optional\directx.ico" />
     <ClInclude Include="DXUT\Core\DXUT.h" />

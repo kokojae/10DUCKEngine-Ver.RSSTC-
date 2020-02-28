@@ -32,6 +32,8 @@ void SceneManager::LoadScene(Scene scene, bool camera_clear)
 		SoundManager::PlaySFX(L"resorce/sound/scene/mainmenu.wav", true);
 
 		ObjectManager::Instantiate<TitleBG>();
+		ObjectManager::Instantiate<TitleStartBtn>({ -650, -80 });
+		ObjectManager::Instantiate<TitleOptionBtn>({ -600, 150 });
 		break;
 	case SceneManager::Scene::Stage1:
 		SoundManager::PlaySFX(L"resorce/sound/scene/stage1.wav", true);

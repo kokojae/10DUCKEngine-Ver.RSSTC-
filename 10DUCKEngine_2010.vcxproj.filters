@@ -140,7 +140,10 @@
     <ClCompile Include="TitleBG.cpp">
       <Filter>GameObject\Scene\Title</Filter>
     </ClCompile>
-    <ClCompile Include="TitleStartBtn.cpp" />
+    <ClCompile Include="TitleStartBtn.cpp">
+      <Filter>GameObject\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleOptionBtn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -198,7 +201,10 @@
     <ClInclude Include="TitleBG.h">
       <Filter>GameObject\Scene\Title</Filter>
     </ClInclude>
-    <ClInclude Include="TitleStartBtn.h" />
+    <ClInclude Include="TitleStartBtn.h">
+      <Filter>GameObject\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleOptionBtn.h" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
