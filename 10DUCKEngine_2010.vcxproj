@@ -385,6 +385,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Background.cpp" />
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="Camera.cpp" />
@@ -404,6 +405,7 @@
     <ClCompile Include="TitleOptionBtn.cpp" />
     <ClCompile Include="TitleStartBtn.cpp" />
     <ClInclude Include="10DUCKEngine.h" />
+    <ClInclude Include="Background.h" />
     <ClInclude Include="Block.h" />
     <ClInclude Include="BoxCollider.h" />
     <ClInclude Include="Camera.h" />

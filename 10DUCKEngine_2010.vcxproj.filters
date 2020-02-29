@@ -30,6 +30,12 @@
     <Filter Include="GameObject\Scene\Title">
       <UniqueIdentifier>{815da7af-93d7-4244-8608-5aa1b5a9e787}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Stage">
+      <UniqueIdentifier>{b00c9b59-9082-4da3-a19d-8aee9dd98e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Character">
+      <UniqueIdentifier>{4427a9ad-6ae8-4daa-994f-40ec68b49fd6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -113,9 +119,6 @@
     <ClCompile Include="TextureManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>GameObject</Filter>
-    </ClCompile>
     <ClCompile Include="SceneManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
@@ -134,16 +137,24 @@
     <ClCompile Include="Layer.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
-    <ClCompile Include="Block.cpp">
-      <Filter>GameObject</Filter>
-    </ClCompile>
     <ClCompile Include="TitleBG.cpp">
       <Filter>GameObject\Scene\Title</Filter>
     </ClCompile>
     <ClCompile Include="TitleStartBtn.cpp">
       <Filter>GameObject\Scene\Title</Filter>
     </ClCompile>
-    <ClCompile Include="TitleOptionBtn.cpp" />
+    <ClCompile Include="Block.cpp">
+      <Filter>GameObject\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>GameObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>GameObject\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleOptionBtn.cpp">
+      <Filter>GameObject\Scene\Title</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -174,9 +185,6 @@
     <ClInclude Include="TextureManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>GameObject</Filter>
-    </ClInclude>
     <ClInclude Include="SceneManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
@@ -195,16 +203,24 @@
     <ClInclude Include="Layer.h">
       <Filter>Managers</Filter>
     </ClInclude>
-    <ClInclude Include="Block.h">
-      <Filter>GameObject</Filter>
-    </ClInclude>
     <ClInclude Include="TitleBG.h">
       <Filter>GameObject\Scene\Title</Filter>
     </ClInclude>
     <ClInclude Include="TitleStartBtn.h">
       <Filter>GameObject\Scene\Title</Filter>
     </ClInclude>
-    <ClInclude Include="TitleOptionBtn.h" />
+    <ClInclude Include="Block.h">
+      <Filter>GameObject\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>GameObject\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleOptionBtn.h">
+      <Filter>GameObject\Scene\Title</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
