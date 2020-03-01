@@ -3,6 +3,7 @@
 #include "TextureInfo.h"
 #include "BoxCollider.h"
 #include "ObjectManager.h"
+#include "MouseInput.h"
 
 class GameObject
 {
@@ -30,6 +31,7 @@ public:
 	T* Instantiate(D3DXVECTOR2 position);
 
 	GameObject* PlaceMeeting(D3DXVECTOR2 vector, int layer = Layer::DEFAULT);
+	bool isClicked(MouseInput::Key key = MouseInput::Key::AnyKey);
 
 	void SetTexture(std::wstring path, D3DXVECTOR2 texture_size);
 	void SetCollider(D3DXVECTOR2 size);

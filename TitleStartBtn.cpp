@@ -1,5 +1,6 @@
 #include "DXUT.h"
 #include "TitleStartBtn.h"
+#include "10DUCKEngine.h"
 
 void TitleStartBtn::Init()
 {
@@ -11,4 +12,6 @@ void TitleStartBtn::Init()
 
 void TitleStartBtn::Update()
 {
+	if (isClicked(MouseInput::Key::Left))
+		SceneManager::LoadScene(SceneManager::Scene::Stage1);
 }

@@ -14,12 +14,6 @@ void TitleBG::Init()
 
 void TitleBG::Update()
 {
-	if (GetAsyncKeyState(VK_SPACE))
-	{
-		SoundManager::EndSFX();
-		SceneManager::LoadScene(SceneManager::Scene::Stage1);
-	}
-
 	Animation();
 }
 

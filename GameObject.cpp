@@ -49,6 +49,32 @@ GameObject* GameObject::PlaceMeeting(D3DXVECTOR2 vector, int layer)
 	return inst;
 }
 
+bool GameObject::isClicked(MouseInput::Key key)
+{
+	switch (key)
+	{
+	case MouseInput::Key::Left:
+		if (MouseInput::leftButton)
+			break;
+		else
+			return false;
+	case MouseInput::Key::Right:
+		if (MouseInput::rightButton)
+			break;
+		else
+			return false;
+	case MouseInput::Key::Middle:
+		if (MouseInput::middleButton)
+			break;
+		else
+			return false;
+	case MouseInput::Key::AnyKey:
+		break;
+	}
+
+	return IntersectRect(&RECT(), GetRect(), MouseInput::GetRect());
+}
+
 void GameObject::SetTexture(std::wstring path, D3DXVECTOR2 texture_size)
 {
 	texture.texture = TextureManager::LoadTexture(path);

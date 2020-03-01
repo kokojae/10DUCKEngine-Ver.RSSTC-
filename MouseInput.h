@@ -10,5 +10,8 @@ public:
 	static bool rightButton;
 	static bool middleButton;
 	static D3DXVECTOR2 pos;
+	static RECT rc;
+
+	static RECT* GetRect();
 };
 
