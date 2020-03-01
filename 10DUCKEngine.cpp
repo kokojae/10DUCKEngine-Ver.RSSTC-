@@ -120,6 +120,20 @@ void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
     GraphicManager::Release();
 }
 
+//--------------------------------------------------------------------------------------
+// Mouse CALLBACK Proc
+//--------------------------------------------------------------------------------------
+void CALLBACK MouseProc(bool bLeftButtonDown, bool bRightButtonDown, bool bMiddleButtonDown,
+                        bool bSideButton1Down, bool bSideButton2Down, int nMouseWheelDelta,
+                        int xPos,int yPos, void* pUserContext)
+{
+    MouseInput::leftButton = bLeftButtonDown;
+    MouseInput::rightButton = bRightButtonDown;
+    MouseInput::middleButton = bMiddleButtonDown;
+    MouseInput::sideButton1 = bSideButton1Down;
+    MouseInput::sideButton2 = bSideButton2Down;
+    MouseInput::pos = { static_cast<float>(xPos),static_cast<float>(yPos) };
+}
 
 //--------------------------------------------------------------------------------------
 // Initialize everything and go into a render loop
@@ -144,6 +158,7 @@ INT WINAPI wWinMain( HINSTANCE, HINSTANCE, LPWSTR, int )
     DXUTSetCallbackDeviceChanging( ModifyDeviceSettings );
     DXUTSetCallbackMsgProc( MsgProc );
     DXUTSetCallbackFrameMove( OnFrameMove );
+    DXUTSetCallbackMouse( MouseProc );
 
     // TODO: Perform any application-level initialization here
     // TODO : 모든 애플리케이션 레벨 초기화를 수행하십시오.

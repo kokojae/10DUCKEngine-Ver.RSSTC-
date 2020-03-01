@@ -27,6 +27,7 @@
 #include "Camera.h"
 #include "GraphicManager.h"
 #include "Layer.h"
+#include "MouseInput.h"
 #include "ObjectManager.h"
 #include "SceneManager.h"
 #include "SoundManager.h"

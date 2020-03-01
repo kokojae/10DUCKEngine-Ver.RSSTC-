@@ -155,6 +155,9 @@
     <ClCompile Include="TitleOptionBtn.cpp">
       <Filter>GameObject\Scene\Title</Filter>
     </ClCompile>
+    <ClCompile Include="MouseInput.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -220,6 +223,9 @@
     </ClInclude>
     <ClInclude Include="TitleOptionBtn.h">
       <Filter>GameObject\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseInput.h">
+      <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
