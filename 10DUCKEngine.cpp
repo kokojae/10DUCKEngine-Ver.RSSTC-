@@ -6,6 +6,7 @@
 #include "DXUT.h"
 #include "resource.h"
 #include "10DUCKEngine.h"
+#include <Windowsx.h>
 
 
 //--------------------------------------------------------------------------------------
@@ -98,6 +99,23 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
 LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
                           bool* pbNoFurtherProcessing, void* pUserContext )
 {
+    if (uMsg == WM_LBUTTONDOWN)
+        MouseInput::leftButton = true;
+    if (uMsg == WM_RBUTTONDOWN)
+        MouseInput::rightButton = true;
+    if (uMsg == WM_MBUTTONDOWN)
+        MouseInput::middleButton = true;
+
+    if (uMsg == WM_LBUTTONUP)
+        MouseInput::leftButton = false;
+    if (uMsg == WM_RBUTTONUP)
+        MouseInput::rightButton = false;
+    if (uMsg == WM_MBUTTONUP)
+        MouseInput::middleButton = false;
+
+    MouseInput::pos = { static_cast<float>(GET_X_LPARAM(lParam)),
+                        static_cast<float>(GET_Y_LPARAM(lParam)) };
+
     return 0;
 }
 
@@ -120,20 +138,6 @@ void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
     GraphicManager::Release();
 }
 
-//--------------------------------------------------------------------------------------
-// Mouse CALLBACK Proc
-//--------------------------------------------------------------------------------------
-void CALLBACK MouseProc(bool bLeftButtonDown, bool bRightButtonDown, bool bMiddleButtonDown,
-                        bool bSideButton1Down, bool bSideButton2Down, int nMouseWheelDelta,
-                        int xPos,int yPos, void* pUserContext)
-{
-    MouseInput::leftButton = bLeftButtonDown;
-    MouseInput::rightButton = bRightButtonDown;
-    MouseInput::middleButton = bMiddleButtonDown;
-    MouseInput::sideButton1 = bSideButton1Down;
-    MouseInput::sideButton2 = bSideButton2Down;
-    MouseInput::pos = { static_cast<float>(xPos),static_cast<float>(yPos) };
-}
 
 //--------------------------------------------------------------------------------------
 // Initialize everything and go into a render loop
@@ -158,7 +162,6 @@ INT WINAPI wWinMain( HINSTANCE, HINSTANCE, LPWSTR, int )
     DXUTSetCallbackDeviceChanging( ModifyDeviceSettings );
     DXUTSetCallbackMsgProc( MsgProc );
     DXUTSetCallbackFrameMove( OnFrameMove );
-    DXUTSetCallbackMouse( MouseProc );
 
     // TODO: Perform any application-level initialization here
     // TODO : 모든 애플리케이션 레벨 초기화를 수행하십시오.
