@@ -6,5 +6,6 @@ class TitleStartBtn :
 public:
 	void Init() override;
 	void Update() override;
+	void Render() override;
 };
 

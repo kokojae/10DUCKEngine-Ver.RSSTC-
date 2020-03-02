@@ -15,3 +15,8 @@ void TitleStartBtn::Update()
 	if (isClicked(MouseInput::Key::Left))
 		SceneManager::LoadScene(SceneManager::Scene::Stage1);
 }
+
+void TitleStartBtn::Render()
+{
+	DrawSelf();
+}
