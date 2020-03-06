@@ -72,7 +72,12 @@ bool GameObject::isClicked(MouseInput::Key key)
 		break;
 	}
 
-	return IntersectRect(&RECT(), GetRect(), MouseInput::GetRect());
+	bool res =IntersectRect(&RECT(), GetRect(), MouseInput::GetRect());
+
+	printf("object) L : %.ld, T : %.ld, R : %.ld, B : %.ld\n", rect->left, rect->top, rect->right, rect->bottom);
+	printf("mouse)  L : %.ld, T : %.ld, R : %.ld, B : %.ld\n", MouseInput::GetRect()->left, MouseInput::GetRect()->top, MouseInput::GetRect()->right, MouseInput::GetRect()->bottom);
+
+	return res;
 }
 
 void GameObject::SetTexture(std::wstring path, D3DXVECTOR2 texture_size)

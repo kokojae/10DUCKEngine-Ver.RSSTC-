@@ -26,17 +26,10 @@ void SceneManager::LoadScene(Scene scene, bool camera_clear)
 
 	ObjectManager::Clear();
 
-	std::wstring text = L"X : ";
-	//text += MouseInput::pos.x;
-	text += L", Y : ";
-	//text += MouseInput::pos.y;
-
 	switch (scene)
 	{
 	case SceneManager::Scene::Title: 
 		SoundManager::PlaySFX(L"resorce/sound/scene/mainmenu.wav", true);
-
-		ObjectManager::Instantiate<Text>()->SetText(text, { 1,1 }, true);
 
 		ObjectManager::Instantiate<TitleBG>();
 		ObjectManager::Instantiate<TitleStartBtn>({ -650, -80 });

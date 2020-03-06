@@ -6,6 +6,7 @@ void TitleStartBtn::Init()
 {
 	SetTexture(L"resorce/background/scene/mainmenu/start_b.png", { 50,11 });
 	texture.scale = { 10,10 };
+	SetCollider({ 500,110 });
 
 	z = 3;
 }

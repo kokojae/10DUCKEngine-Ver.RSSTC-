@@ -2,7 +2,7 @@
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
-#define WINDOWED false
+#define WINDOWED true
 
 // Component
 #include "BoxCollider.h"
@@ -32,6 +32,9 @@
 #include "SceneManager.h"
 #include "SoundManager.h"
 #include "TextureManager.h"
+
+//콘솔창 띄우기
+#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console") 
 
 #define COLOR(a,r,g,b) (D3DCOLOR_ARGB(a, r, g, b))
 #define TRANSPARENCY_COLOR(a) (D3DCOLOR_ARGB(a, 128, 128, 128))
