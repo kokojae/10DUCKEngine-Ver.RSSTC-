@@ -36,6 +36,9 @@
     <Filter Include="GameObject\Character">
       <UniqueIdentifier>{4427a9ad-6ae8-4daa-994f-40ec68b49fd6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Scene\Option">
+      <UniqueIdentifier>{d63ba6fa-5e33-4fa0-8fef-5e74d2ceabf8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -158,6 +161,12 @@
     <ClCompile Include="MouseInput.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+    <ClCompile Include="OptionBG.cpp">
+      <Filter>GameObject\Scene\Option</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionRetBtn.cpp">
+      <Filter>GameObject\Scene\Option</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -226,6 +235,12 @@
     </ClInclude>
     <ClInclude Include="MouseInput.h">
       <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionBG.h">
+      <Filter>GameObject\Scene\Option</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionRetBtn.h">
+      <Filter>GameObject\Scene\Option</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

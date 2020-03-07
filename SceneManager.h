@@ -7,7 +7,7 @@ public:
 
 	static enum class Scene
 	{
-		Title, Stage1
+		Title, Stage1, Option
 	};
 
 	static Scene current_scene;

@@ -10,6 +10,8 @@ void TitleBG::Init()
 	z = 10;
 
 	betTime = 0;
+
+	SoundManager::PlaySFX(L"resorce/sound/scene/mainmenu.wav", true);
 }
 
 void TitleBG::Update()

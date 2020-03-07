@@ -396,6 +396,8 @@
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="MouseInput.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="OptionBG.cpp" />
+    <ClCompile Include="OptionRetBtn.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SoundManager.cpp" />
@@ -416,6 +418,8 @@
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MouseInput.h" />
     <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="OptionBG.h" />
+    <ClInclude Include="OptionRetBtn.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SoundManager.h" />

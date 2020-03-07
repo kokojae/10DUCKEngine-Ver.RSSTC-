@@ -14,7 +14,10 @@ void TitleStartBtn::Init()
 void TitleStartBtn::Update()
 {
 	if (isClicked(MouseInput::Key::Left))
+	{
+		SoundManager::EndSFX();
 		SceneManager::LoadScene(SceneManager::Scene::Stage1);
+	}
 }
 
 void TitleStartBtn::Render()

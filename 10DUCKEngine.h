@@ -2,7 +2,7 @@
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
-#define WINDOWED true
+#define WINDOWED false
 
 // Component
 #include "BoxCollider.h"
@@ -12,14 +12,17 @@
 // Base
 #include "GameObject.h"
 #include "Text.h"
-//Character
+// Character
 #include "Player.h"
-//Scene
-//Title
+// Scene
+// Title
 #include "TitleBG.h"
 #include "TitleStartBtn.h"
 #include "TitleOptionBtn.h"
-//Stage
+// Option
+#include "OptionBG.h"
+#include "OptionRetBtn.h"
+// Stage
 #include "Background.h"
 #include "Block.h"
 
@@ -34,7 +37,7 @@
 #include "TextureManager.h"
 
 //콘솔창 띄우기
-#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console") 
+//#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console") 
 
 #define COLOR(a,r,g,b) (D3DCOLOR_ARGB(a, r, g, b))
 #define TRANSPARENCY_COLOR(a) (D3DCOLOR_ARGB(a, 128, 128, 128))
