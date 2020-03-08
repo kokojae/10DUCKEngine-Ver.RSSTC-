@@ -15,7 +15,7 @@ void TitleStartBtn::Update()
 {
 	if (isClicked(MouseInput::Key::Left))
 	{
-		SoundManager::EndSFX();
+		SoundManager::EndSFX(L"resorce/sound/scene/mainmenu.wav");
 		SceneManager::LoadScene(SceneManager::Scene::Stage1);
 	}
 }

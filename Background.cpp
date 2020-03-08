@@ -8,6 +8,4 @@ void Background::Init()
 	texture.center = { 0,0 };
 
 	z = 10;
-
-	SoundManager::PlaySFX(L"resorce/sound/scene/stage1.wav", true);
 }
