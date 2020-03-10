@@ -14,6 +14,11 @@
 #include "Text.h"
 // Character
 #include "Player.h"
+// Weapon
+// Base
+#include "Weapon.h"
+// Weapons
+#include "Shotgun.h"
 // Scene
 // Title
 #include "TitleBG.h"

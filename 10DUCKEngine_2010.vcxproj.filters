@@ -39,6 +39,12 @@
     <Filter Include="GameObject\Scene\Option">
       <UniqueIdentifier>{d63ba6fa-5e33-4fa0-8fef-5e74d2ceabf8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Weapon">
+      <UniqueIdentifier>{028660d9-8183-40e5-bde6-d29802f68387}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Weapon\Base">
+      <UniqueIdentifier>{d221e2d9-72b0-411a-b920-e70bcc5bd334}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -167,6 +173,12 @@
     <ClCompile Include="OptionRetBtn.cpp">
       <Filter>GameObject\Scene\Option</Filter>
     </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>GameObject\Weapon\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Shotgun.cpp">
+      <Filter>GameObject\Weapon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -241,6 +253,12 @@
     </ClInclude>
     <ClInclude Include="OptionRetBtn.h">
       <Filter>GameObject\Scene\Option</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>GameObject\Weapon\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Shotgun.h">
+      <Filter>GameObject\Weapon</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

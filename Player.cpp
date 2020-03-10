@@ -38,6 +38,8 @@ void Player::Init()
 	betTime = 0.0f;
 
 	camera_position = position;
+
+	ObjectManager::Instantiate<Shotgun>(position)->SetTrans(&position, &(texture.scale));
 }
 
 void Player::Update()

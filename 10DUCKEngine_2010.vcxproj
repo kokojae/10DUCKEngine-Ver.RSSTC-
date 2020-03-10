@@ -400,6 +400,7 @@
     <ClCompile Include="OptionRetBtn.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Shotgun.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="TextureInfo.cpp" />
@@ -407,6 +408,7 @@
     <ClCompile Include="TitleBG.cpp" />
     <ClCompile Include="TitleOptionBtn.cpp" />
     <ClCompile Include="TitleStartBtn.cpp" />
+    <ClCompile Include="Weapon.cpp" />
     <ClInclude Include="10DUCKEngine.h" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="Block.h" />
@@ -422,6 +424,7 @@
     <ClInclude Include="OptionRetBtn.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Shotgun.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="TextureInfo.h" />
@@ -429,6 +432,7 @@
     <ClInclude Include="TitleBG.h" />
     <ClInclude Include="TitleOptionBtn.h" />
     <ClInclude Include="TitleStartBtn.h" />
+    <ClInclude Include="Weapon.h" />
     <None Include="DXUT\Optional\directx.ico" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />
