@@ -5,10 +5,11 @@ class Weapon :
 {
 public:
 	D3DXVECTOR2* playerPos;
-	D3DXVECTOR2* playerSca;
 	float fireBetTime;
+	   
+	void RotationToMouse();
 
 	void SetPosition();
-	void SetTrans(D3DXVECTOR2* pos, D3DXVECTOR2* sca) { playerPos = pos; playerSca = sca; }
+	void SetTrans(D3DXVECTOR2* pos) { playerPos = pos; }
 };
 

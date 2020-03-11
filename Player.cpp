@@ -39,7 +39,7 @@ void Player::Init()
 
 	camera_position = position;
 
-	ObjectManager::Instantiate<Shotgun>(position)->SetTrans(&position, &(texture.scale));
+	ObjectManager::Instantiate<Shotgun>(position)->SetTrans(&position);
 }
 
 void Player::Update()

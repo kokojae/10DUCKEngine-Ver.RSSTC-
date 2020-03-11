@@ -14,4 +14,5 @@ void Shotgun::Init()
 void Shotgun::Update()
 {
 	SetPosition();
+	RotationToMouse();
 }
