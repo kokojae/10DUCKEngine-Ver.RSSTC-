@@ -57,7 +57,7 @@ void Player::LateUpdate()
 
 void Player::GetKey()
 {
-	if (GetAsyncKeyState(VK_LEFT))
+	if (GetAsyncKeyState('A'))
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
 		{
@@ -73,7 +73,7 @@ void Player::GetKey()
 		if (hspeed > -5)
 			hspeed -= 0.5f;
 	}
-	if (GetAsyncKeyState(VK_RIGHT))
+	if (GetAsyncKeyState('D'))
 	{
 		if (texture.texture != tex_move && !isJump)
 		{
@@ -86,7 +86,7 @@ void Player::GetKey()
 		if (hspeed < 5)
 			hspeed += 0.5f;
 	}
-	if (!GetAsyncKeyState(VK_LEFT) && !GetAsyncKeyState(VK_RIGHT))
+	if (!GetAsyncKeyState('A') && !GetAsyncKeyState('D'))
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
 		{
@@ -99,7 +99,7 @@ void Player::GetKey()
 
 		hspeed -= hspeed / 20;
 	}
-	if (GetAsyncKeyState(VK_UP))
+	if (GetAsyncKeyState(VK_SPACE))
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
 		{
@@ -113,15 +113,6 @@ void Player::GetKey()
 			vspeed = -15;
 		}
 	}
-
-	if (GetAsyncKeyState('W'))
-		Camera::scale -= Camera::scale * 0.2;
-	if (GetAsyncKeyState('S'))
-		Camera::scale += Camera::scale * 0.2;
-	if (GetAsyncKeyState('D'))
-		Camera::rotation += 5;
-	if (GetAsyncKeyState('A'))
-		Camera::rotation -= 5;
 }
 
 void Player::Hspeed()
