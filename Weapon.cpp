@@ -2,6 +2,14 @@
 #include "Weapon.h"
 #include "10DUCKEngine.h"
 
+void Weapon::Update()
+{
+	SetPosition();
+	RotationToMouse();
+	KeyInput();
+	lastTime += DXUTGetElapsedTime();
+}
+
 void Weapon::RotationToMouse()
 {
 	auto diff = MouseInput::pos - position;
@@ -19,6 +27,17 @@ void Weapon::RotationToMouse()
 		texture.scale.y = -abs(texture.scale.y);
 	if (texture.rotation > -90 && texture.rotation < 90)
 		texture.scale.y = abs(texture.scale.y);
+}
+
+void Weapon::Fire()
+{
+	if (lastTime >= fireBetTime)
+	{
+		for (int i = 0; i < bulletCount; i++)
+		{
+
+		}
+	}
 }
 
 void Weapon::SetPosition()

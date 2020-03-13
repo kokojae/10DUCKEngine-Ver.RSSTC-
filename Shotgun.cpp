@@ -9,10 +9,14 @@ void Shotgun::Init()
 
 	z = -10;
 	collider.layer = Layer::WEAPON;
+
+	SetBullet(1);
 }
 
-void Shotgun::Update()
+void Shotgun::KeyInput()
 {
-	SetPosition();
-	RotationToMouse();
+	if (MouseInput::leftButton)
+	{
+		Fire();
+	}
 }
