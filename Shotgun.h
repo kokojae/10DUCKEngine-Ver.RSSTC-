@@ -5,7 +5,6 @@ class Shotgun :
 {
 public:
 	void Init() override;
-	void Update() override;
 
 	void KeyInput() override;
 };

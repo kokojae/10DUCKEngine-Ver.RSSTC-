@@ -45,6 +45,9 @@
     <Filter Include="GameObject\Weapon\Base">
       <UniqueIdentifier>{d221e2d9-72b0-411a-b920-e70bcc5bd334}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Weapon\Bullet">
+      <UniqueIdentifier>{f4961948-0401-4d4f-b5de-72187ce54fa0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -179,6 +182,7 @@
     <ClCompile Include="Shotgun.cpp">
       <Filter>GameObject\Weapon</Filter>
     </ClCompile>
+    <ClCompile Include="Bullet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -260,6 +264,7 @@
     <ClInclude Include="Shotgun.h">
       <Filter>GameObject\Weapon</Filter>
     </ClInclude>
+    <ClInclude Include="Bullet.h" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
