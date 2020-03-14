@@ -2,7 +2,7 @@
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
-#define WINDOWED true
+#define WINDOWED false
 
 // Component
 #include "BoxCollider.h"

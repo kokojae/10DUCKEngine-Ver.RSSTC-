@@ -75,11 +75,13 @@ bool GameObject::isClicked(MouseInput::Key key)
 	return IntersectRect(&RECT(), GetRect(), MouseInput::GetRect());
 }
 
-void GameObject::SetTexture(std::wstring path, D3DXVECTOR2 texture_size)
+void GameObject::SetTexture(std::wstring path, D3DXVECTOR2 texture_size, D3DXVECTOR2 object_sclae)
 {
 	texture.texture = TextureManager::LoadTexture(path);
 	texture.size = texture_size;
 	texture.center = texture_size / 2;
+	texture.scale = object_sclae;
+	SetCollider({ texture_size.x * object_sclae.x,texture_size.y * object_sclae.y });
 }
 
 void GameObject::SetCollider(D3DXVECTOR2 size)
