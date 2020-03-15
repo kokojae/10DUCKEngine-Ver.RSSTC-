@@ -17,6 +17,8 @@
 // Weapon
 // Base
 #include "Weapon.h"
+// Bullet
+#include "Bullet.h"
 // Weapons
 #include "Shotgun.h"
 // Scene
@@ -42,7 +44,7 @@
 #include "TextureManager.h"
 
 //콘솔창 띄우기
-#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console") 
+//#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console") 
 
 #define COLOR(a,r,g,b) (D3DCOLOR_ARGB(a, r, g, b))
 #define TRANSPARENCY_COLOR(a) (D3DCOLOR_ARGB(a, 128, 128, 128))

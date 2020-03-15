@@ -14,9 +14,14 @@ public:
 	}
 
 	D3DXVECTOR2* playerPos;
+	D3DXVECTOR2 diff;
+
+	float bulletSpeed;
+	float bulletDestroyTime;
 	int bulletCount;
-	float bulletSpread;
-	float fireBetTime;	   
+	int bulletSpread;
+
+	float fireBetTime;
 	float lastTime;
 
 	virtual void Update() override;
@@ -25,10 +30,9 @@ public:
 
 	void RotationToMouse();
 	void Fire();
-
 	void SetPosition();
+
 	void SetTrans(D3DXVECTOR2* pos) { playerPos = pos; }
-	void SetBullet(float betTime, int count = 1, float spread = 0)
-	{ bulletCount = count; bulletSpread = spread; fireBetTime = betTime; }
+	void SetBullet(float speed, float desTime, float betTime, int count = 1, int spread = 0);
 };
 

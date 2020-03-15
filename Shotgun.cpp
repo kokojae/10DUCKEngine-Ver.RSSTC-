@@ -9,8 +9,8 @@ void Shotgun::Init()
 
 	z = -10;
 	collider.layer = Layer::WEAPON;
-
-	SetBullet(1);
+	
+	SetBullet(1000, 0.5, 1, 5, 50);
 }
 
 void Shotgun::KeyInput()
