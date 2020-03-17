@@ -1,18 +1,18 @@
 #include "DXUT.h"
-#include "Shotgun.h"
+#include "Machinegun.h"
 #include "10DUCKEngine.h"
 
-void Shotgun::Init()
+void Machinegun::Init()
 {
 	SetTexture(L"resorce/player/Weapon/shotgun.png", { 56, 10 }, { 2,2 });
 
 	z = -10;
 	collider.layer = Layer::WEAPON;
-	
-	SetBullet(1000, 0.5, 1, 5, 50);
+
+	SetBullet(1700, 1, 0.1, 1, 10);
 }
 
-void Shotgun::KeyInput()
+void Machinegun::KeyInput()
 {
 	if (MouseInput::leftButton)
 	{
@@ -20,7 +20,7 @@ void Shotgun::KeyInput()
 	}
 }
 
-void Shotgun::PlaySFX()
+void Machinegun::PlaySFX()
 {
 	SoundManager::PlaySFX(L"resorce/sound/player/shoot.wav");
 }

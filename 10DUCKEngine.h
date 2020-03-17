@@ -20,6 +20,7 @@
 // Bullet
 #include "Bullet.h"
 // Weapons
+#include "Machinegun.h"
 #include "Shotgun.h"
 // Scene
 // Title
