@@ -42,14 +42,15 @@ CSound* SoundManager::SearchSFX(std::wstring path)
 void SoundManager::PlaySFX(std::wstring path, bool isBGM)
 {
 	CSound* SFX = SearchSFX(path);
-	
-	if (!SFX->IsSoundPlaying())
+
+	if (isBGM)
+		SFX->Play(0, DSBPLAY_LOOPING);
+	else
 	{
-		if (isBGM)
-			SFX->Play(0, DSBPLAY_LOOPING);
-		else
-			SFX->Play(0, NULL);
+		SFX->Reset();
+		SFX->Play(0, NULL);
 	}
+
 
 	return;
 }
@@ -62,4 +63,16 @@ void SoundManager::EndSFX(std::wstring path)
 		sound_map.find(path)->second->Reset();
 	}
 	return;
+}
+
+void SoundManager::EndAllSFX()
+{
+	std::map<std::wstring, CSound*>::iterator it = sound_map.begin();
+
+	while (it != sound_map.end())
+	{
+		it->second->Stop();
+		it->second->Reset();
+		it++;
+	}
 }
