@@ -20,3 +20,8 @@ void Shotgun::KeyInput()
 		Fire();
 	}
 }
+
+void Shotgun::PlaySFX()
+{
+	SoundManager::PlaySFX(L"resorce/sound/player/shoot.wav");
+}

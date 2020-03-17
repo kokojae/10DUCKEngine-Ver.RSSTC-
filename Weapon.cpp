@@ -46,6 +46,7 @@ void Weapon::Fire()
 			}
 			auto vec = diff + D3DXVECTOR2(x, y);
 			ObjectManager::Instantiate<Bullet>(position)->SetBullet(D3DXVec2Normalize(&D3DXVECTOR2(), &vec), bulletSpeed, bulletDestroyTime);
+			PlaySFX();
 		}
 	}
 }

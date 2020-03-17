@@ -7,5 +7,6 @@ public:
 	void Init() override;
 
 	void KeyInput() override;
+	void PlaySFX() override;
 };
 

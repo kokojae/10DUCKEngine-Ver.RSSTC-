@@ -50,9 +50,6 @@ void SoundManager::PlaySFX(std::wstring path, bool isBGM)
 		SFX->Reset();
 		SFX->Play(0, NULL);
 	}
-
-
-	return;
 }
 
 void SoundManager::EndSFX(std::wstring path)
@@ -62,7 +59,6 @@ void SoundManager::EndSFX(std::wstring path)
 		sound_map.find(path)->second->Stop();
 		sound_map.find(path)->second->Reset();
 	}
-	return;
 }
 
 void SoundManager::EndAllSFX()
