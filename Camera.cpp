@@ -17,14 +17,12 @@ Camera::~Camera()
 
 D3DXMATRIX Camera::GetMatrix()
 {
-	D3DXMATRIX mat, mat_rotation, mat_scale, mat_position, screen;
+	D3DXMATRIX mat_rotation, mat_scale, mat_position, screen;
 
 	D3DXMatrixTranslation(&mat_position, -position.x, -position.y, 0);
 	D3DXMatrixRotationZ(&mat_rotation, D3DXToRadian(rotation));
 	D3DXMatrixScaling(&mat_scale, 1 / scale, 1 / scale, 1);
 	D3DXMatrixTranslation(&screen, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 0);
 
-	mat = mat_position * mat_scale * mat_rotation * screen;
-
-	return mat;
+	return mat_position * mat_scale * mat_rotation * screen;
 }
