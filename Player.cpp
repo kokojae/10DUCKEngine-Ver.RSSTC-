@@ -39,8 +39,8 @@ void Player::Init()
 
 	camera_position = position;
 
-	//ObjectManager::Instantiate<Shotgun>(position)->SetTrans(&position);
-	ObjectManager::Instantiate<Machinegun>(position)->SetTrans(&position);
+	//Instantiate<Shotgun>(position)->SetTrans(&position);
+	Instantiate<Machinegun>(position)->SetTrans(&position);
 }
 
 void Player::Update()
