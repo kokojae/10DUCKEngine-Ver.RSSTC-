@@ -401,6 +401,7 @@
     <ClCompile Include="OptionBG.cpp" />
     <ClCompile Include="OptionRetBtn.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Sans.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Shotgun.cpp" />
     <ClCompile Include="SoundManager.cpp" />
@@ -427,6 +428,7 @@
     <ClInclude Include="OptionBG.h" />
     <ClInclude Include="OptionRetBtn.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Sans.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Shotgun.h" />
     <ClInclude Include="SoundManager.h" />

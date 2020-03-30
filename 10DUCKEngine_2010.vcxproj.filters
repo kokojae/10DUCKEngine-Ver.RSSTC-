@@ -188,6 +188,9 @@
     <ClCompile Include="Machinegun.cpp">
       <Filter>GameObject\Weapon</Filter>
     </ClCompile>
+    <ClCompile Include="Sans.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -274,6 +277,9 @@
     </ClInclude>
     <ClInclude Include="Machinegun.h">
       <Filter>GameObject\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Sans.h">
+      <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

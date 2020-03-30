@@ -33,6 +33,8 @@
 // Stage
 #include "Background.h"
 #include "Block.h"
+// ETC
+#include "Sans.h"
 
 // Manager
 #include "Camera.h"

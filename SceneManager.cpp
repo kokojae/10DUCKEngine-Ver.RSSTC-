@@ -35,6 +35,8 @@ void SceneManager::LoadScene(Scene scene, bool camera_clear)
 		ObjectManager::Instantiate<TitleBG>();
 		ObjectManager::Instantiate<TitleStartBtn>({ -650, -80 });
 		ObjectManager::Instantiate<TitleOptionBtn>({ -600, 150 });
+
+		ObjectManager::Instantiate<Sans>({ 0,0 });
 		break;
 	case SceneManager::Scene::Stage1:
 		SoundManager::PlaySFX(L"resorce/sound/scene/stage1.wav", true);
@@ -47,6 +49,8 @@ void SceneManager::LoadScene(Scene scene, bool camera_clear)
 		ObjectManager::Instantiate<Block>({ 0,100 });
 		ObjectManager::Instantiate<Block>({ 1000,-100 });
 		ObjectManager::Instantiate<Player>();
+
+		ObjectManager::Instantiate<Sans>({ 0,0 });
 		break;
 	case SceneManager::Scene::Option:
 		ObjectManager::Instantiate<OptionBG>();

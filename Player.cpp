@@ -41,6 +41,8 @@ void Player::Init()
 
 	//Instantiate<Shotgun>(position)->SetTrans(&position);
 	Instantiate<Machinegun>(position)->SetTrans(&position);
+
+	name = L"player";
 }
 
 void Player::Update()
@@ -113,6 +115,10 @@ void Player::GetKey()
 
 			vspeed = -15;
 		}
+	}
+	if (GetAsyncKeyState('Q'))
+	{
+		destroy = true;
 	}
 }
 

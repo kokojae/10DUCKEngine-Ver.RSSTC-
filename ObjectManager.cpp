@@ -91,3 +91,13 @@ GameObject* ObjectManager::ColliderCheck(RECT* objRect, int layer)
 	}
 	return nullptr;
 }
+
+GameObject* ObjectManager::SearchObject(std::wstring objName)
+{
+	for (GameObject* inst : object_list)
+	{
+		if (inst->name == objName)
+			return inst;
+	}
+	return nullptr;
+}

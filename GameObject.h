@@ -18,6 +18,7 @@ public:
 	int z = 0;
 	bool destroy_me = true;
 	RECT* rect = new RECT();
+	std::wstring name = L"";
 
 	virtual void Init();
 	virtual void Update();

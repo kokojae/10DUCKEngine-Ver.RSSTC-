@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <list>
 #include "Layer.h"
 class GameObject;
@@ -24,6 +25,7 @@ public:
 	static void Clear();
 
 	static GameObject* ColliderCheck(RECT* objRect, int layer = Layer::DEFAULT);
+	static GameObject* SearchObject(std::wstring objName);
 };
 
 template<typename T>
