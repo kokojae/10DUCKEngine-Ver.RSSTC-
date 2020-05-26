@@ -19,7 +19,19 @@ void GraphicManager::Init()
 	D3DXCreateSprite(DXUTGetD3D9Device(), &sprite);
 
 	// ÆùÆ® »ý¼º
-	D3DXCreateFont(DXUTGetD3D9Device(), 70, 0, FW_BOLD, 1, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE, L"¸¼Àº °íµñ", &font);
+	D3DXCreateFont(
+		DXUTGetD3D9Device(), 
+		70, 
+		0, 
+		FW_BOLD, 
+		1, 
+		false, 
+		DEFAULT_CHARSET, 
+		OUT_DEFAULT_PRECIS, 
+		DEFAULT_QUALITY, 
+		DEFAULT_PITCH | FF_DONTCARE, 
+		L"¸¼Àº °íµñ", 
+		&font);
 }
 
 void GraphicManager::Render()
